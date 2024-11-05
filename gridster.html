@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap Modal介紹</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <style>
+        .custom-button {
+            background-color: #7d91a6;
+            border: none;
+        }
+
+        .gridster {
+            margin: 20px;
+        }
+
+        .gridster li {
+            list-style-type: none;
+            background: #4f85bf;
+            border: 1px solid #000;
+            display: inline-block;
+            margin: 5px;
+            text-align: center;
+            line-height: 55px;
+            color: white;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">JS套件介紹
+                <img src="https://png.pngtree.com/png-vector/20240913/ourmid/pngtree-cute-ghost-hides-in-halloween-pumpkin-vector-png-image_13825731.png"
+                    alt="LOGO" width="35" height="35">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="aos.html">AOS 動畫</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="text-to-speech.html">文字轉語音</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="lottie.html">Lottie動畫</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="chart.html">Chart.js 圖表</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="lazy-loading.html">Lazy-loading 懶加載</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Swiper.html">滑動圖片畫廊</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Hover.html">懸停動畫效果</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Greensock.html">Greensock</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="gridster.html">gridster</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="A-Frame.html">A-Frame</a>
+                    </li>
+            </div>
+        </div>
+
+    </nav>
+    <div class="container  mt-3">
+        <h2>gridster.js</h2>
+        <p>輕鬆地在JavaScript 應用程式中與GOV.UK Registers 服務進行互動。</p>
+        <p class="mb-2"></p><a href="https://dsmorse.github.io/gridster.js/" target="_blank">gridster.js</a>
+        <p class="mb-3"></p>
+        <h2>範例程式碼</h2>
+        <pre><code>
+            &lt;div id="demo-1" class="gridster"&gt;
+                &lt;ul&gt;
+                    &lt;li data-row="1" data-col="1" data-sizex="2" data-sizey="2"&gt;0&lt;/li&gt;
+                    &lt;li data-row="1" data-col="3" data-sizex="1" data-sizey="2"&gt;1&lt;/li&gt;
+                    &lt;li data-row="1" data-col="4" data-sizex="1" data-sizey="1"&gt;2&lt;/li&gt;
+                    &lt;li data-row="3" data-col="2" data-sizex="3" data-sizey="1"&gt;3&lt;/li&gt;
+                    &lt;li data-row="4" data-col="1" data-sizex="1" data-sizey="1"&gt;4&lt;/li&gt;
+                    &lt;li data-row="3" data-col="1" data-sizex="1" data-sizey="1"&gt;5&lt;/li&gt;
+                    &lt;li data-row="4" data-col="2" data-sizex="1" data-sizey="1"&gt;6&lt;/li&gt;
+                    &lt;li data-row="5" data-col="2" data-sizex="1" data-sizey="1"&gt;7&lt;/li&gt;
+                    &lt;li data-row="4" data-col="4" data-sizex="1" data-sizey="1"&gt;8&lt;/li&gt;
+                &lt;/ul&gt;
+            &lt;/div&gt;
+    
+            &lt;script type="text/javascript"&gt;
+            var gridster = [];
+    
+            $(function () {
+                gridster[0] = $("#demo-1 ul").gridster({
+                    namespace: '#demo-1',
+                    widget_base_dimensions: [100, 55],
+                    widget_margins: [5, 5]
+                }).data('gridster');
+            });
+            &lt;/script&gt;
+        </code></pre>
+
+        </code></pre>
+        <h2>效果展示</h2>
+        <div id="demo-1" class="gridster">
+            <ul>
+                <li data-row="1" data-col="1" data-sizex="2" data-sizey="2">0</li>
+                <li data-row="1" data-col="3" data-sizex="1" data-sizey="2">1</li>
+                <li data-row="1" data-col="4" data-sizex="1" data-sizey="1">2</li>
+                <li data-row="3" data-col="2" data-sizex="3" data-sizey="1">3</li>
+                <li data-row="4" data-col="1" data-sizex="1" data-sizey="1">4</li>
+                <li data-row="3" data-col="1" data-sizex="1" data-sizey="1">5</li>
+                <li data-row="4" data-col="2" data-sizex="1" data-sizey="1">6</li>
+                <li data-row="5" data-col="2" data-sizex="1" data-sizey="1">7</li>
+                <li data-row="4" data-col="4" data-sizex="1" data-sizey="1">8</li>
+            </ul>
+        </div>
+
+        <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.gridster/0.5.5/jquery.gridster.min.js"></script>
+        <script>
+            var gridster = [];
+            $(function () {
+                gridster[0] = $("#demo-1 ul").gridster({
+                    namespace: '#demo-1',
+                    widget_base_dimensions: [100, 55],
+                    widget_margins: [5, 5]
+                }).data('gridster');
+            });
+        </script>
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

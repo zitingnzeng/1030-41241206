@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">JS套件介紹
+                <img src="https://png.pngtree.com/png-vector/20240913/ourmid/pngtree-cute-ghost-hides-in-halloween-pumpkin-vector-png-image_13825731.png"
+                    alt="LOGO" width="35" height="35">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="aos.html">AOS 動畫</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="text-to-speech.html">文字轉語音</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="lottie.html">Lottie動畫</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="chart.html">Chart.js 圖表</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="lazy-loading.html">Lazy-loading 懶加載</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Swiper.html">滑動圖片畫廊</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Hover.html">懸停動畫效果</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Greensock.html">Greensock</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="gridster.html">gridster</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="A-Frame.html">A-Frame</a>
+                    </li>
+            </div>
+        </div>
+
+    </nav>
+    <div class="container  mt-3">
+        <h2>AOS動畫效果</h2>
+        <p class="mb-2"></p><a href="https://michalsnik.github.io/aos/" target="_blank">AOS 官網</a>
+        <p class="mb-3"></p><h3>範例程式碼</h3>
+        <pre><code>            &lt;!-- AOS CSS 和 JS --&gt;
+&lt;link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet"&gt;
+&lt;script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js">&lt;/script&gt;
+
+        
+        &lt;!-- 初始化 AOS --&gt;
+        &lt;script&gt;
+            AOS.init();
+        &lt;/script&gt;
+                    &lt;div data-aos="fade-up"&gt;Fade Up 動畫&lt;/div&gt;
+                    &lt;div data-aos="fade-down"&gt;Fade Down 動畫&lt;/div&gt;
+                    &lt;div data-aos="fade-left"&gt;Fade Left 動畫&lt;/div&gt;
+                    &lt;div data-aos="fade-right"&gt;Fade Right 動畫&lt;/div&gt;
+                    &lt;div data-aos="zoom-in"&gt;Zoom In 動畫&lt;/div&gt;
+                    &lt;div data-aos="zoom-out"&gt;Zoom Out 動畫&lt;/div&gt;
+                    &lt;div data-aos="flip-left"&gt;Flip Left 動畫&lt;/div&gt;
+                    &lt;div data-aos="flip-right"&gt;Flip Right 動畫&lt;/div&gt;
+                    &lt;div data-aos="slide-up"&gt;Slide Up 動畫&lt;/div&gt;
+                    &lt;div data-aos="slide-down"&gt;Slide Down 動畫&lt;/div&gt;
+                    &lt;div data-aos="slide-left"&gt;Slide Left 動畫&lt;/div&gt;
+                    &lt;div data-aos="slide-right"&gt;Slide Right 動畫&lt;/div&gt;
+                </code></pre>
+                  </div>
+        <p class="mb-3"></p><h3>效果展示</h3>
+            <!-- Bootstrap CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- AOS CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+    
+    <style>
+        /* 自訂樣式 */
+        .animation-box {
+            padding: 35px;
+            color: #fff;
+            font-size: 24px;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .fade-up { background-color: #007bff; }
+        .fade-down { background-color: #6c757d; }
+        .fade-left { background-color: #28a745; }
+        .fade-right { background-color: #dc3545; }
+        .zoom-in { background-color: #ffc107; }
+        .zoom-out { background-color: #17a2b8; }
+        .flip-left { background-color: #343a40; }
+        .flip-right { background-color: #f8f9fa; color: #343a40; }
+        .slide-up { background-color: #007bff; }
+        .slide-down { background-color: #6c757d; }
+        .slide-left { background-color: #28a745; }
+        .slide-right { background-color: #dc3545; }
+    </style>
+</head>
+<body>
+
+    <div class="container text-center mt-5">
+        <!-- 動畫效果的區塊 -->
+        <div class="animation-box fade-up" data-aos="fade-up">Fade Up 動畫</div>
+        <div class="animation-box fade-down" data-aos="fade-down">Fade Down 動畫</div>
+        <div class="animation-box fade-left" data-aos="fade-left">Fade Left 動畫</div>
+        <div class="animation-box fade-right" data-aos="fade-right">Fade Right 動畫</div>
+        <div class="animation-box zoom-in" data-aos="zoom-in">Zoom In 動畫</div>
+        <div class="animation-box zoom-out" data-aos="zoom-out">Zoom Out 動畫</div>
+        <div class="animation-box flip-left" data-aos="flip-left">Flip Left 動畫</div>
+        <div class="animation-box flip-right" data-aos="flip-right">Flip Right 動畫</div>
+        <div class="animation-box slide-up" data-aos="slide-up">Slide Up 動畫</div>
+        <div class="animation-box slide-down" data-aos="slide-down">Slide Down 動畫</div>
+        <div class="animation-box slide-left" data-aos="slide-left">Slide Left 動畫</div>
+        <div class="animation-box slide-right" data-aos="slide-right">Slide Right 動畫</div>
+    </div>
+        
+    </div>
+
+    <!-- Bootstrap和AOS JavaScript -->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    
+    <script>
+        // 初始化 AOS
+        AOS.init();
+    </script>
+    </div>
+        
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+
+    
+</body>
+
+</html>

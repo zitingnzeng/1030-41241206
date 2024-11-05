@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">JS套件介紹
+                <img src="https://png.pngtree.com/png-vector/20240913/ourmid/pngtree-cute-ghost-hides-in-halloween-pumpkin-vector-png-image_13825731.png"
+                    alt="LOGO" width="35" height="35">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="aos.html">AOS 動畫</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="text-to-speech.html">文字轉語音</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="lottie.html">Lottie動畫</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="chart.html">Chart.js 圖表</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="lazy-loading.html">Lazy-loading 懶加載</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Swiper.html">滑動圖片畫廊</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Hover.html">懸停動畫效果</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Greensock.html">Greensock</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="gridster.html">gridster</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="A-Frame.html">A-Frame</a>
+                    </li>
+            </div>
+        </div>
+
+    </nav>
+    <div class="container  mt-3">
+        <h1>文字轉語音</h1>
+        <p>利用 Web Speech API 進行文字轉語音的示例。</p>
+        <p class="mb-2"></p><a href="https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesis" target="_blank">Web Speech API 官網</a>
+        <p class="mb-3"></p><h2>範例程式碼</h2>
+        
+        <pre><code> 
+// 使用 Web Speech API 將文字轉換為語音
+function speakText(text) {
+    const msg = new SpeechSynthesisUtterance(text);
+    window.speechSynthesis.speak(msg);
+}
+
+// 點擊按鈕時執行
+document.getElementById('speakButton').addEventListener('click', () =&gt; {
+    const text = document.getElementById('textInput').value;
+    speakText(text);
+});
+</code></pre>
+        <p class="mb-5"></p><h2>效果展示</h2>
+        <div class="container mt-2">
+            <label for="textInput" class="form-label">請輸入文字：</label>
+            <input type="text" id="textInput" class="form-control" placeholder="例如：你好，這是文字轉語音的示例">
+            
+            <button type="button" id="speakButton" class="btn btn-primary mt-3">播放語音</button>
+        </div>
+    
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+        <script>
+            document.getElementById('speakButton').addEventListener('click', function() {
+                const text = document.getElementById('textInput').value;
+                if (text) {
+                    const utterance = new SpeechSynthesisUtterance(text);
+                    utterance.lang = 'zh-TW'; // Automatically set to Chinese for this example
+                    window.speechSynthesis.speak(utterance);
+                } else {
+                    alert('請輸入一些文字！');
+                }
+            });
+        </script>
+  
+</body>
+
+</html>
